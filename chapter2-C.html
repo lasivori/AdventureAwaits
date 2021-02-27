@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Huzzah! Adventure!</title>
+		<link rel="icon" href="assets/logo.png" />
+
+		<link rel="stylesheet" href="styles/bootstrap-icons.css">
+		<link rel="stylesheet" href="styles/bootstrap.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P|Quicksand|Playfair+Display+SC">
+		<script>
+			function inputController(){
+				if(kingdom.checked){
+					parent.location="chapter3-D.html";
+				} else if (giveup.checked){
+					parent.location="giveup.html";
+				}
+			}
+		</script>
+	</head>
+
+	<body class="bg-dark text-light text-center" style="font-family:'Quicksand', sans-serif;">
+		<h1 class="bg-warning pt-1 text-dark" style="font-family:'Press Start 2P', serif;">Adventure Awaits!</h1>
+
+		<p>
+			The adventure seems to be going well so far! But something odd is happening... there is a smell of fire in the air!
+		</p>
+		<p>
+			You continue your adventure to the outside world, following a road to a village called "Townton", but the village is on fire!
+		</p>
+
+		<img class="shadow-lg border w-50" src="assets/villagefire.jpeg">
+
+		<p class="pt-3">How could this happen! You approach the town to see what you could do. An old man approaches you.</p>
+		
+		<img class="shadow-lg border w-25" src="assets/oldman.jpg">
+		
+		<pre class="pt-3 border w-75 mx-auto my-3">
+Marshall... how could Marshall do this... we loved that town rat so much!
+You must stop him! He released all the criminals from the prison, and now he is on his way to kill the king!
+		</pre>
+
+		<p>
+			The old man has asked for your help, how shall you respond?
+		</p>
+
+		<div style="font-family:'Playfair Display SC', sans-serif;">
+			<input class="btn-check" type="radio" id="kingdom" name="input-name" value="kingdom" checked>
+			<label class="btn btn-outline-primary" for="kingdom"> <i class="bi bi-signpost-split-fill"></i> Tell him you will save the kingdom!</label>
+			<br>
+			<input class="btn-check" type="radio" id="giveup" name="input-name" value="giveup">
+			<label class="btn btn-outline-secondary mt-3" for="giveup"> <i class="bi bi-signpost-split-fill"></i> Give up, the rat is too powerful!</label>
+			<br>
+			<input class="btn btn-success mt-3" type="button" onClick="inputController()" value="Submit">
+		</div>
+		<br>
+
+		<script src="scripts/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Huzzah! Adventure!</title>
+		<link rel="icon" href="assets/logo.png" />
+
+		<link rel="stylesheet" href="styles/bootstrap-icons.css">
+		<link rel="stylesheet" href="styles/bootstrap.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P|Quicksand|Playfair+Display+SC">
+		<script>
+			function inputController(){
+				if(rat.checked && !son.checked){
+					parent.location="chapter3-A.html";
+				} else if (son.checked) {
+					parent.location="chapter3-C.html";	
+				} else {
+					parent.location="chapter3-B.html";
+				}
+			}
+		</script>
+	</head>
+
+	<body class="bg-dark text-light text-center" style="font-family:'Quicksand', sans-serif;">
+		<h1 class="bg-primary pt-1 text-dark" style="font-family:'Press Start 2P', serif;">You've Avoided the Fight</h1>
+		<img class="shadow-lg border w-50" src="assets/village.jpeg">
+
+		<p class="pt-3">
+			The adventure seems to be going well so far! You know your limits and avoided a fight you didn't think you could win, though one day you may come back to make sure the world is safe.
+		</p>
+		<p>
+			You continue your adventure to the outside world, following a road to a village called "Townton".
+		</p>
+
+		<p>
+			There, you meet a kind old man.
+		</p>
+		<img class="shadow-lg border w-25" src="assets/oldman.jpg">
+		<pre class="pt-3 border w-50 mx-auto my-3">
+Have you seen the town rat, Marshall? He's gone missing.
+Oh, also, if you know anything, could you go let my son know? He'd just gone off to find Marshall.
+He's got a skin condition that makes him look ghoulish.
+		</pre>
+
+		<p>
+			The old man has asked for your help, but it seems that you may have been mistaken at the start of your adventure... how shall you respond?
+		</p>
+
+		<div style="font-family:'Playfair Display SC', sans-serif;">
+			<input class="btn-check" type="checkbox" id="rat" name="input-name" value="rat">
+			<label class="btn btn-outline-secondary" for="rat"> <i class="bi bi-signpost-fill"></i> Tell him that the rat is dead</label>
+			<br>
+			<input class="btn-check" type="checkbox" id="son" name="input-name" value="son">
+			<label class="btn btn-outline-secondary mt-3" for="son"> <i class="bi bi-signpost-fill"></i> Bring his son back to Townton</label>
+			<br>
+			<input class="btn btn-success mt-3" type="button" onClick="inputController()" value="Submit">
+		</div>
+		<br>
+
+		<script src="scripts/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

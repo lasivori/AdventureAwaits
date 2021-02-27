@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Huzzah! Adventure!</title>
+		<link rel="icon" href="assets/logo.png" />
+
+		<link rel="stylesheet" href="styles/bootstrap-icons.css">
+		<link rel="stylesheet" href="styles/bootstrap.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P|Quicksand|Playfair+Display+SC">
+		<script>
+			function inputController(){
+				if(fight.checked){
+					parent.location="chapter4-A.html";
+				} else if (pacifist.checked) { 
+					parent.location="chapter4-B.html"
+				} else if (giveup.checked){
+					parent.location="giveup.html";
+				}
+			}
+		</script>
+	</head>
+
+	<body class="bg-dark text-light text-center" style="font-family:'Quicksand', sans-serif;">
+		<h1 class="bg-primary pt-1 text-dark" style="font-family:'Press Start 2P', serif;">Save the Kingdom!</h1>
+		<img class="shadow-lg border w-75" src="assets/fight.jpeg">
+		<p class="pt-3">
+			As you venture to save the king, a group of bandits approach to fight you on the road. They already have their weapons drawn and are rushing towards you!
+		</p>
+		<br>
+		<p>
+			What ever shall you do?
+		</p>
+		<div style="font-family:'Playfair Display SC', sans-serif;">
+			<input class="btn-check" type="radio" id="fight" name="input-name" value="fight" checked>
+			<label class="btn btn-outline-danger" for="fight"> <i class="bi bi-signpost-split-fill"></i> You can take on this rowdy group! You choose to Fight them!</label>
+			<br>
+			<input class="btn-check" type="radio" id="pacifist" name="input-name" value="pacifist">
+			<label class="btn btn-outline-primary mt-3" for="pacifist"> <i class="bi bi-signpost-split-fill"></i> They deserve to know kindness. You let them know that they are loved and appreciated.</label>
+			<br>
+			<input class="btn-check" type="radio" id="giveup" name="input-name" value="giveup">
+			<label class="btn btn-outline-secondary mt-3" for="giveup"> <i class="bi bi-signpost-split-fill"></i> This isn't worth it anymore. You walk away from the Fight and decide to give up on adventure.</label>
+			<br>
+			<input class="btn btn-success mt-3" type="button" onClick="inputController()" value="Submit">
+		</div>
+		<br>
+
+		<script src="scripts/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

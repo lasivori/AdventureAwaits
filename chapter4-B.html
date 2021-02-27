@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Huzzah! Adventure!</title>
+		<link rel="icon" href="assets/logo.png" />
+
+		<link rel="stylesheet" href="styles/bootstrap-icons.css">
+		<link rel="stylesheet" href="styles/bootstrap.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P|Quicksand|Playfair+Display+SC">
+		<script>
+			function inputController(){
+				if(kingdom.checked){
+					parent.location="victory-2.html";
+				} else if (giveup.checked){
+					parent.location="giveup.html";
+				}
+			}
+		</script>
+	</head>
+
+	<body class="bg-dark text-light text-center" style="font-family:'Quicksand', sans-serif;">
+		<h1 class="bg-primary pt-1 text-dark" style="font-family:'Press Start 2P', serif;">New Friends!</h1>
+		<p>
+			The group of bandits have never been shown such love; they decided to change their ways for you, and will aid you in your fight.
+		</p>
+		<img class="shadow-lg w-25" src="assets/throne.png">
+		<p class="pt-3">
+			You continue your adventure with your newfound friends; you find your way to the king's throne room just in time!
+		</p>
+		<p>
+			Marshall is about to kill the king! What shall you do!
+		</p>
+		<div style="font-family:'Playfair Display SC', sans-serif;">
+			<input class="btn-check" type="radio" id="kingdom" name="input-name" value="kingdom" checked>
+			<label class="btn btn-outline-danger" for="kingdom"> <i class="bi bi-signpost-split-fill"></i> You have to act quickly! Attack the rat!</label>
+			<br>
+			<input class="btn-check" type="radio" id="giveup" name="input-name" value="giveup">
+			<label class="btn btn-outline-secondary mt-3" for="giveup"> <i class="bi bi-signpost-split-fill"></i> Give up, the rat is too powerful!</label>
+			<br>
+			<input class="btn btn-success mt-3" type="button" onClick="inputController()" value="Submit">
+		</div>
+		<br>
+
+		<script src="scripts/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

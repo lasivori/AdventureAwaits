@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Huzzah! Adventure!</title>
+		<link rel="icon" href="assets/logo.png" />
+
+		<link rel="stylesheet" href="styles/bootstrap-icons.css">
+		<link rel="stylesheet" href="styles/bootstrap.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P|Quicksand|Playfair+Display+SC">
+		<script>
+			function inputController(){
+				if(kingdom.checked){
+					parent.location="victory-1.html";
+				} else if (giveup.checked){
+					parent.location="giveup.html";
+				}
+			}
+		</script>
+	</head>
+
+	<body class="bg-dark text-light text-center" style="font-family:'Quicksand', sans-serif;">
+		<h1 class="bg-danger pt-1 text-dark" style="font-family:'Press Start 2P', serif;">The King is Dead!</h1>
+		<p>
+			The fight has slowed you down, but the bandits were no match for you.
+		</p>
+		<p>
+			You make it to the king's throne room, but sadly you were too late! The king is dead! And Marshall sits on the throne, ready to fight!
+		</p>
+		<img class="shadow-lg w-25 mb-3" src="assets/ratthrone.png">
+		<div style="font-family:'Playfair Display SC', sans-serif;">
+			<input class="btn-check" type="radio" id="kingdom" name="input-name" value="kingdom" checked>
+			<label class="btn btn-outline-danger" for="kingdom"> <i class="bi bi-signpost-split-fill"></i> Attack the rat!</label>
+			<br>
+			<input class="btn-check" type="radio" id="giveup" name="input-name" value="giveup">
+			<label class="btn btn-outline-secondary mt-3" for="giveup"> <i class="bi bi-signpost-split-fill"></i> Give up, the rat is too powerful!</label>
+			<br>
+			<input class="btn btn-success mt-3" type="button" onClick="inputController()" value="Submit">
+		</div>
+		<br>
+
+		<script src="scripts/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
